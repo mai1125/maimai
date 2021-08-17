@@ -1,5 +1,7 @@
 /** ユーザーモデル */
 export interface User {
-  /** メッセージ*/
-  comment?: string;
+  /** ユーザーID*/
+  id?: number;
+  /** コメント*/
+  comment: string;
 }

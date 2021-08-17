@@ -6,6 +6,13 @@
       "request": "attach",
       "name": "API",
       "port": 9229
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "WEB",
+      "port": 9222,
+      "url": "http://localhost:4200/*"
     }
   ]
 }

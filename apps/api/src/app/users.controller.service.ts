@@ -10,7 +10,7 @@ export class UsersControllerService {
    * データ作成(Create)
    */
   async create(): Promise<User> {
-    const target = 'メッセージ';
+    const target = 'message';
     const newUser: User = {
       comment: target,
     };

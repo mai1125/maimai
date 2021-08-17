@@ -23,16 +23,22 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "typeorm": "$(npm bin)/ts-node -r tsconfig-paths/register -P ./tsconfig.base.json $(npm bin)/typeorm --config ./apps/api/src/app/typeorm/typeorm.config.ts",
+    "typeorm:migrate": "npm run typeorm migration:generate -- -n",
+    "typeorm:drop": "npm run typeorm schema:drop"
   },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
+    "@nestjs/typeorm": "^7.1.5",
+    "mysql2": "^2.3.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.3",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "typeorm": "^0.2.37"
   },
   "devDependencies": {
     "@nestjs/schematics": "^7.0.0",

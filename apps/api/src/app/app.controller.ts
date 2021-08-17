@@ -1,13 +1,15 @@
 import { Controller, Get } from '@nestjs/common';
-
-import { AppService } from './app.service';
+import { User } from './interfaces/users.interface';
+import { UsersControllerService } from './users.controller.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly usersControllerService: UsersControllerService
+  ) {}
 
-  @Get()
-  getData() {
-    return this.appService.getData();
+  @Get('create')
+  create(): Promise<User> {
+    return this.usersControllerService.create();
   }
 }

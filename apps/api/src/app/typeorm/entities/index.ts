@@ -1,2 +1,2 @@
 export * from './';
-export * from './users.entity';
+export * from './boards.entity';

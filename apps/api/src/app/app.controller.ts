@@ -1,5 +1,5 @@
 import { Body, Controller, Post, Res } from '@nestjs/common';
-import { RequestUser, User } from './interfaces/users.interface';
+import { RequestMessage, Board } from './interfaces/boads.interface';
 import { UsersControllerService } from './users.controller.service';
 
 @Controller()
@@ -9,7 +9,7 @@ export class AppController {
   ) {}
 
   @Post('create')
-  create(@Body() res: RequestUser): Promise<User> {
+  create(@Body() res: RequestMessage): Promise<Board> {
     return this.usersControllerService.create(res.message);
   }
 }

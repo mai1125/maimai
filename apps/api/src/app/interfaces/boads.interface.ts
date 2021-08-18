@@ -1,12 +1,12 @@
 /** ユーザーモデル */
-export interface User {
+export interface Board {
   /** ユーザーID*/
   id?: number;
   /** コメント*/
   comment: string;
 }
 
-export interface RequestUser {
+export interface RequestMessage {
   /** コメント*/
   message: string;
 }

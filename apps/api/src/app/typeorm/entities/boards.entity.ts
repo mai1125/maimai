@@ -1,8 +1,8 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { User } from '../../interfaces/users.interface';
+import { Board } from '../../interfaces/boads.interface';
 
 @Entity()
-export class Users implements User {
+export class Boards implements Board {
   @PrimaryGeneratedColumn('uuid')
   id: number;
 

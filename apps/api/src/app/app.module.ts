@@ -6,12 +6,12 @@ import { AppController } from './app.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import TypeOrmOptions from './typeorm/typeorm.config';
 
-import { UsersService } from './typeorm/entities/users.service';
+import { BoardsService } from './typeorm/entities/boards.service';
 import { UsersControllerService } from './users.controller.service';
 
 @Module({
   imports: [TypeOrmModule.forRoot(TypeOrmOptions)],
   controllers: [AppController],
-  providers: [UsersService, UsersControllerService],
+  providers: [BoardsService, UsersControllerService],
 })
 export class AppModule {}

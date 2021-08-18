@@ -8,4 +8,7 @@ export class Boards implements Board {
 
   @Column()
   comment: string;
+
+  @Column()
+  name: string;
 }

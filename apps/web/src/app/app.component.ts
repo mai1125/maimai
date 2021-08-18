@@ -11,6 +11,7 @@ export class AppComponent {
   // フォームグループの名前
   myFrom = new FormGroup({
     message: new FormControl('', Validators.required),
+    name: new FormControl('', Validators.required),
   });
 
   constructor(private apiService: ApiService) {}

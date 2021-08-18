@@ -4,6 +4,8 @@ export interface Board {
   id?: number;
   /** コメント*/
   comment: string;
+  /** コメント*/
+  name: string;
 }
 
 export interface RequestMessage {

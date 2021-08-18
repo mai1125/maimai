@@ -1,4 +1,7 @@
 <form [formGroup]="myFrom" (ngSubmit)="submit()">
+  <label>コメント</label>
   <input type="text" formControlName="message" />
+  <label>名前</label>
+  <input type="text" formControlName="name" />
   <button [disabled]="!myFrom.valid">送信</button>
 </form>

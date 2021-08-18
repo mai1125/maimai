@@ -11,6 +11,7 @@ export class initialize1628945062013 implements MigrationInterface {
       const accounts: Board[] = [
         {
           comment: 'こんにちは',
+          name: '名前',
         },
       ];
       // 実際にここでDBへsaveを走らせる

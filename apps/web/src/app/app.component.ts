@@ -17,6 +17,14 @@ export class AppComponent {
 
   submit() {
     // 送信
+    this.apiService.post('create', this.myFrom.value).subscribe(
+      (res) => {
+        console.log(JSON.stringify(res));
+      },
+      (err) => {
+        console.log(JSON.stringify(err));
+      }
+    );
     console.log(this.myFrom.value);
     // 送信したら消す
     this.myFrom.reset();

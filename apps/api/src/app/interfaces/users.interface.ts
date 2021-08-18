@@ -5,3 +5,8 @@ export interface User {
   /** コメント*/
   comment: string;
 }
+
+export interface RequestUser {
+  /** コメント*/
+  message: string;
+}

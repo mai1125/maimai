@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-import { User } from './interfaces/users.interface';
+import { Body, Controller, Post, Res } from '@nestjs/common';
+import { RequestUser, User } from './interfaces/users.interface';
 import { UsersControllerService } from './users.controller.service';
 
 @Controller()
@@ -8,8 +8,8 @@ export class AppController {
     private readonly usersControllerService: UsersControllerService
   ) {}
 
-  @Get('create')
-  create(): Promise<User> {
-    return this.usersControllerService.create();
+  @Post('create')
+  create(@Body() res: RequestUser): Promise<User> {
+    return this.usersControllerService.create(res.message);
   }
 }
